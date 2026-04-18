@@ -27,13 +27,13 @@ function App() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: {  isSubmitting },
   } = useForm({
     resolver: zodResolver(schema),
     mode: "onBlur", // better UX
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     toast.success("Login successful 🚀");
 
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -116,11 +116,11 @@ function App() {
           </div>
           <button
             disabled={isSubmitting}
-            className={`mt-6 h-15 flex flex-row gap-2 justify-center items-center rounded-xl w-full mb-4
+            className={`mt-6 h-15 flex flex-row gap-2 justify-center items-center rounded-xl shadow-[0px_10px_15px_-3px_rgba(52,0,117,0.2),0px_4px_6px_-4px_rgba(52,0,117,0.2)] w-full mb-4
             ${
               isSubmitting
                 ? "bg-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-[#4C1D95] to-[#340075]"
+                : "bg-linear-to-r from-[#4C1D95] to-[#340075]"
             }`}
           >
             <p className="font-inter text-[18px] font-semibold text-white">
@@ -144,7 +144,7 @@ function App() {
           <div className="mt-8 flex flex-row justify-center items-center gap-4">
             <button
               type="button"
-              className="flex flex-row justify-center items-center gap-2 h-10.5 bg-white rounded-xl backdrop-blur-2xl w-full drop-shadow-md"
+              className="flex flex-row justify-center items-center gap-2 h-10.5 bg-white rounded-xl backdrop-blur-2xl w-full shadow-[0px_1px_2px_rgba(0,0,0,0.05)]"
             >
               <img src={google} alt="" />
               <p className="font-inter text-[12px] font-semibold leading-4 tracking-normal text-[#141B2B]">
@@ -153,7 +153,7 @@ function App() {
             </button>
             <button
               type="button"
-              className="flex flex-row justify-center items-center gap-2 h-10.5 bg-white rounded-xl backdrop-blur-2xl w-full drop-shadow-md"
+              className="flex flex-row justify-center items-center gap-2 h-10.5 bg-white rounded-xl backdrop-blur-2xl w-full shadow-[0px_1px_2px_rgba(0,0,0,0.05)]"
             >
               <img src={apple} alt="" />
               <p className="font-inter text-[12px] font-semibold leading-4 tracking-normal text-[#141B2B]">

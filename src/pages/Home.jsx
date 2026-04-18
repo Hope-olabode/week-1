@@ -10,8 +10,8 @@ import secarrow from "../assets/arrow2.svg";
 
 export default function Home() {
   return (
-    <div className="bg-[#F9F9FF] ">
-      <div className="px-6 py-4">
+    <div className="bg-[#F9F9FF] mb-4">
+      <div className="px-6 py-4 shadow-[0px_1px_2px_rgba(0,0,0,0.05)]">
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-row items-center gap-3">
             <img src={menue} alt="" />
@@ -71,7 +71,7 @@ export default function Home() {
               View all
             </p>
           </div>
-          <div className="mt-4 bg-[#FFFF] rounded-3xl p-6 pb-2">
+          <div className="mt-4 bg-[#FFFF] rounded-3xl p-6 pb-2 shadow-[0px_4px_24px_rgba(52,0,117,0.06)]">
             <div className="flex flex-row justify-between mb-6">
               <div className="div">
                 <p className="font-manrope text-[24px] font-bold leading-7.5 tracking-normal text-[#141B2B]">
@@ -125,9 +125,6 @@ export default function Home() {
             <img src={secarrow} alt="" />
           </div>
         </div>
-      </div>
-      <div className="div">
-        
       </div>
     </div>
   );
